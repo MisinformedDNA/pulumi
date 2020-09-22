@@ -3,6 +3,16 @@ CHANGELOG
 
 ## HEAD (Unreleased)
 
+- Support provider-side previews. These changes will admit more known property values during
+  `pulumi preview`, which should improve the accuracy of the proposed changes. Because the
+  Pulumi engine does not lock the operations performed in an update to those proposed during a
+  preview, it is possible for a misbehaving provider--i.e. a provider that produces one set of
+  output property values during a preview and a different set during an update--to cause
+  mismatches between a preview and an update. In these cases, provider-side previews can be
+  disabled entirely by setting the `PULUMI_DISABLE_PROVIDER_PREVIEW` environment variable to
+  `1`.
+  [#5443](https://github.com/pulumi/pulumi/pull/5443).
+
 _(None)_
 
 ## 2.10.2 (2020-09-21)
