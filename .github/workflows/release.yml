@@ -44,6 +44,8 @@ jobs:
       - name: Trigger Docs Build
         run: |
           ./ci-scripts/ci/build-package-docs.sh "pulumi"
+        env:
+          TRAVIS: true
   homebrew:
     name: Update Homebrew
     runs-on: macos-latest
