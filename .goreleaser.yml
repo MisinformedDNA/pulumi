@@ -128,6 +128,7 @@ builds:
 #  main: ./go/pulumi-language-go
 archives:
 - id: pulumi-unix
+  wrap_in_directory: "pulumi"
   builds:
     - pulumi-language-dotnet-unix
     - pulumi-language-go-unix
@@ -144,6 +145,7 @@ archives:
     - sdk/python/cmd/pulumi-language-python-exec
   name_template: "{{ .ProjectName }}-{{ .Tag }}-{{ .Os }}-{{ .Arch }}"
 #- id: pulumi-windows
+#  wrap_in_directory: true
 #  builds:
 #    - pulumi-language-dotnet-windows
 #    - pulumi-language-go-windows
