@@ -12,6 +12,8 @@ CHANGELOG
 - Fixing gzip compression for alternative backends.
   [#5484](https://github.com/pulumi/pulumi/pull/5484)
 
+- Support self-contained executables as binary option for .NET programs.
+  [#5519](https://github.com/pulumi/pulumi/pull/5519)
 
 ## 2.11.2 (2020-10-01)
 
