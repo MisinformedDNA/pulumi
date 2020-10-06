@@ -36,7 +36,6 @@ func Azure(schemaDirectoryPath string) (plugin.Provider, error) {
 	}, nil
 }
 
-
 func Random(schemaDirectoryPath string) (plugin.Provider, error) {
 	schema, err := GetSchema(schemaDirectoryPath, "random")
 	if err != nil {
